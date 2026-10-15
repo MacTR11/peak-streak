@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#B9D7FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1131" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="no-referrer">
+<title>Privacy Policy · Peak Streak</title>
+<meta name="description" content="How Peak Streak, the TriPeaks solitaire game for iPhone and iPad, handles data: no adverts, no tracking, no accounts, and no data collected.">
+<style>
+:root {
+  --coral: #FA7352;
+  --ink: #212652;
+  --gold: #FFC74D;
+  --sky: #3885EB;
+  --bg-top: #B9D7FF;
+  --bg-bottom: #EAF3FF;
+  --surface: #FFFFFF;
+  --text: #212652;
+  --muted: #4B527F;
+  --link: #B8432A;
+  --line: rgba(33, 38, 82, 0.14);
+  --soft: rgba(56, 133, 235, 0.08);
+  --note: #FFF4D9;
+  --note-line: #F2C25A;
+  --shadow: 0 1px 2px rgba(33, 38, 82, 0.06), 0 14px 36px rgba(33, 38, 82, 0.10);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-top: #0D1131;
+    --bg-bottom: #181E4A;
+    --surface: #20275A;
+    --text: #EEF0FF;
+    --muted: #BCC1E6;
+    --link: #FF9F87;
+    --line: rgba(255, 255, 255, 0.14);
+    --soft: rgba(255, 255, 255, 0.05);
+    --note: rgba(255, 199, 77, 0.12);
+    --note-line: rgba(255, 199, 77, 0.45);
+    --shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg-bottom) linear-gradient(180deg, var(--bg-top) 0, var(--bg-bottom) 560px) no-repeat;
+  font: 17px/1.6 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px; padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+.top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; padding: 20px 0 18px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; color: var(--text); text-decoration: none; }
+.mark { position: relative; width: 34px; height: 34px; border-radius: 10px; overflow: hidden; flex: none; background: linear-gradient(180deg, #5E9BF0, #A9CCFF); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35); }
+.mark::before { content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--gold); top: 6px; right: 6px; }
+.mark::after { content: ""; position: absolute; inset: 12px 0 0 0; background: #FFFFFF; clip-path: polygon(0 100%, 22% 35%, 38% 70%, 55% 10%, 75% 65%, 88% 40%, 100% 100%); }
+.top nav { display: flex; gap: 2px; margin-right: -6px; }
+.top nav a { color: var(--text); text-decoration: none; font-weight: 700; font-size: 15px; padding: 8px 11px; border-radius: 999px; }
+.top nav a:hover { background: var(--soft); }
+.top nav a[aria-current="page"] { background: var(--surface); box-shadow: var(--shadow); }
+main { background: var(--surface); border-radius: 28px; box-shadow: var(--shadow); padding: 28px 20px 32px; margin-bottom: 24px; }
+@media (min-width: 640px) { main { padding: 44px 52px 48px; } }
+h1 { font-size: clamp(30px, 7vw, 42px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 6px; }
+h2 { font-size: 23px; line-height: 1.3; letter-spacing: -0.01em; margin: 44px 0 10px; scroll-margin-top: 16px; }
+h3 { font-size: 18px; line-height: 1.35; margin: 26px 0 6px; }
+p, ul, ol { margin: 0 0 14px; }
+ul, ol { padding-left: 24px; }
+li { margin: 5px 0; }
+li::marker { color: var(--coral); }
+strong { font-weight: 700; }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+.updated { color: var(--muted); margin: 0 0 26px; }
+.path { font-weight: 700; white-space: nowrap; }
+.short { background: var(--note); border: 1px solid var(--note-line); border-radius: 20px; padding: 18px 20px 6px; margin: 0 0 30px; }
+.short h2 { margin: 0 0 8px; font-size: 20px; }
+.short ul { padding-left: 20px; }
+.toc { border: 1px solid var(--line); border-radius: 20px; padding: 16px 20px 8px; margin: 0 0 8px; }
+.toc h2 { margin: 0 0 6px; font-size: 17px; color: var(--muted); }
+.toc ol { columns: 2 220px; column-gap: 28px; margin: 0 0 8px; padding-left: 22px; }
+.toc li { margin: 2px 0; break-inside: avoid; }
+.table { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 16px; margin: 6px 0 18px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; }
+thead th { background: var(--soft); font-size: 14px; color: var(--muted); }
+tbody tr + tr td, tbody tr + tr th { border-top: 1px solid var(--line); }
+tbody th { font-weight: 700; min-width: 9em; }
+@media (max-width: 560px) {
+  .table table, .table tbody, .table tr, .table th, .table td { display: block; }
+  .table thead { display: none; }
+  .table tbody th { min-width: 0; padding: 12px 16px 2px; }
+  .table tbody td { padding: 0 16px 12px; }
+  .table tbody tr + tr { border-top: 1px solid var(--line); }
+  .table tbody tr + tr td, .table tbody tr + tr th { border-top: 0; }
+}
+.tag { display: inline-block; font-size: 12px; font-weight: 700; line-height: 1; padding: 4px 8px; border-radius: 999px; background: var(--soft); color: var(--muted); margin-left: 4px; vertical-align: 2px; white-space: nowrap; }
+footer { color: var(--muted); font-size: 15px; text-align: center; padding: 4px 0 40px; padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+footer a { color: inherit; }
+footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="brand"><span class="mark" aria-hidden="true"></span>Peak Streak</span>
+    <nav aria-label="Peak Streak pages">
+      <a href="https://mactr11.github.io/peak-streak/support.html">Support</a>
+      <a href="https://mactr11.github.io/peak-streak/privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Privacy policy</h1>
+    <p class="updated">Last updated 16 October 2026</p>
+
+    <section class="short" aria-labelledby="short-version">
+      <h2 id="short-version">The short version</h2>
+      <ul>
+        <li><strong>No adverts, no tracking, no accounts.</strong> Peak Streak shows no adverts, does not follow you across other apps or websites, and never asks you to sign up.</li>
+        <li><strong>The game collects nothing.</strong> Peak Streak sends no information about you or how you play to us or to anyone else. There are no analytics.</li>
+        <li><strong>Your progress is yours.</strong> It is saved on your device and in your own iCloud account. We do not have a copy.</li>
+        <li><strong>Apple handles the rest.</strong> Payments, subscriptions, Game Center and iCloud are run by Apple. We never see your name, email address or payment details.</li>
+        <li><strong>We never sell or share your data.</strong></li>
+      </ul>
+    </section>
+
+    <nav class="toc" aria-labelledby="contents">
+      <h2 id="contents">Contents</h2>
+      <ol>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#collects">What the game collects</a></li>
+        <li><a href="#on-your-device">On your device and in your iCloud</a></li>
+        <li><a href="#game-center">Game Center</a></li>
+        <li><a href="#purchases">Purchases and VIP</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#what-we-dont-do">What we don&rsquo;t do</a></li>
+        <li><a href="#legal-bases">Legal bases</a></li>
+        <li><a href="#retention">How long data is kept</a></li>
+        <li><a href="#your-rights">Your rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#transfers">Where data is processed</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <section aria-labelledby="who-we-are">
+      <h2 id="who-we-are">1. Who we are</h2>
+      <p>Peak Streak is a solitaire game for iPhone and iPad made by Macauley Treleaven, an independent developer based in the United Kingdom. In this policy, &ldquo;we&rdquo;, &ldquo;us&rdquo; and &ldquo;our&rdquo; mean Macauley Treleaven.</p>
+      <p>We are responsible for the game and for any personal data it handles (in data protection law, the &ldquo;controller&rdquo;). If you have any question about privacy, email us at <a href="mailto:macauleytreleaven@gmail.com">macauleytreleaven@gmail.com</a>.</p>
+      <p>This policy covers the Peak Streak app, its Home Screen widget and these web pages. The web pages use no cookies, no analytics and no scripts. The company that hosts them may keep the standard technical logs that any web server keeps.</p>
+    </section>
+
+    <section aria-labelledby="collects">
+      <h2 id="collects">2. What the game collects: nothing</h2>
+      <p>Peak Streak does not collect any information about you or about how you play. It contains no analytics and no advertising software, and it sends nothing to us or to anyone else. The only things that leave your device are the ones you choose to use and that Apple runs for you: iCloud, Game Center and App Store purchases, described below.</p>
+      <p>If we ever add anonymous usage statistics to help balance the levels, we will update this policy first, and you will be able to turn them off in the game&rsquo;s Settings.</p>
+    </section>
+
+    <section aria-labelledby="on-your-device">
+      <h2 id="on-your-device">3. What stays on your device and in your own iCloud</h2>
+      <p>Everything you do in the game is saved on your device: your level and stars, coins and boosters, card backs and skies, daily gifts, quests and events, statistics such as your longest streak, your settings, and a record of the purchases already delivered (see <a href="#purchases">Purchases</a>).</p>
+      <p>If you are signed in to iCloud, the game also keeps a copy of this in your own iCloud account, using Apple&rsquo;s iCloud key-value storage, so that a new iPhone or your iPad can carry on where you left off. To combine progress from two devices correctly, the game gives each of your devices a random code, which is kept in that copy too. Your iCloud data is stored by Apple under your Apple Account and <a href="https://www.apple.com/legal/privacy/">Apple&rsquo;s Privacy Policy</a>. We cannot see it, and we do not keep a copy of your progress anywhere.</p>
+      <p>The Home Screen widget shows a small summary (your level, place, stars and whether today&rsquo;s gift is waiting) that the game saves on your device. It is not sent anywhere.</p>
+      <p>Deleting the game removes what it saved on that device. To stop the game using iCloud, open the Settings app on your iPhone or iPad, tap your name, then iCloud, and turn off Peak Streak in the list of apps that use iCloud.</p>
+    </section>
+
+    <section aria-labelledby="game-center">
+      <h2 id="game-center">4. Game Center</h2>
+      <p>Game Center is Apple&rsquo;s service for leaderboards and achievements. Signing in is optional and the game works fully without it. If you are signed in, the game sends Game Center your total stars, your best streak score, your best daily challenge score for the day and the achievements you earn. Other players can see them with your Game Center name, depending on your Game Center settings.</p>
+      <p>Game Center is run by Apple under Apple&rsquo;s Privacy Policy. Peak Streak does not read or keep your Game Center name, your friends list or your contacts.</p>
+    </section>
+
+    <section aria-labelledby="purchases">
+      <h2 id="purchases">5. Purchases and Peak Streak VIP</h2>
+      <p>Peak Streak is free to play, with optional in-app purchases (such as coin packs) and an optional Peak Streak VIP subscription. All payments are handled by Apple through the App Store. We never see your name, Apple Account, card details or billing address; App Store Connect shows us only sales figures that do not identify you.</p>
+      <p>When you buy something, the App Store tells the game what was bought, with a transaction number and, for VIP, when the subscription renews or ends. The game checks this on your device and keeps the transaction numbers with your progress (on your device and in your iCloud), so that every purchase is delivered once and never twice, and so that purchases can be restored.</p>
+      <p>Subscriptions are managed, cancelled and refunded by Apple. Our <a href="https://mactr11.github.io/peak-streak/support.html">support page</a> explains how.</p>
+    </section>
+
+    <section aria-labelledby="notifications">
+      <h2 id="notifications">6. Notifications</h2>
+      <p>The game can remind you when your daily gift is ready, when your run of daily gifts is about to end, and when the weekend Streak Festival begins. Reminders stay off unless you say yes, and iOS asks for your permission as well.</p>
+      <p>Reminders are scheduled on your device by the game itself. No information is sent to us, or to any notification server, to make them work. Turn them off in the game&rsquo;s <span class="path">Settings &rsaquo; Gameplay &rsaquo; Daily gift reminders</span>, or in the Settings app under <span class="path">Notifications &rsaquo; Peak Streak</span>.</p>
+    </section>
+
+    <section aria-labelledby="what-we-dont-do">
+      <h2 id="what-we-dont-do">7. What we don&rsquo;t do</h2>
+      <ul>
+        <li><strong>No adverts.</strong> Peak Streak shows no adverts and contains no advertising software.</li>
+        <li><strong>No tracking.</strong> We do not track you across other companies&rsquo; apps or websites, and the game does not use the advertising identifier. That is why it never shows Apple&rsquo;s &ldquo;Allow to track&rdquo; question.</li>
+        <li><strong>No selling or sharing.</strong> We do not sell, rent or share data with anyone, including data brokers and advertisers.</li>
+        <li><strong>No accounts.</strong> There is nothing to sign up for, and the game never asks for your name, email address or phone number.</li>
+        <li><strong>No access to your personal things.</strong> The game does not use your location, contacts, photos, camera, microphone or health data.</li>
+        <li><strong>No profiling.</strong> We do not build profiles of players or make automated decisions about you.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="legal-bases">
+      <h2 id="legal-bases">8. Legal bases (UK GDPR and EU GDPR)</h2>
+      <p>Data protection laws such as the UK GDPR and the EU GDPR apply to personal data, meaning information about a person who can be identified. Peak Streak is designed to handle as little as possible. Where any of the following does count as personal data, these are our legal bases:</p>
+      <ul>
+        <li><strong>Delivering purchases:</strong> using the purchase records described above is necessary to <em>perform our contract with you</em>.</li>
+        <li><strong>Reminders:</strong> only with your <em>consent</em>, which you can withdraw in Settings.</li>
+        <li><strong>Emails you send us:</strong> we use your email address and what you write to answer you, based on our <em>legitimate interests</em> in helping players (or our contract with you, when it is about a purchase).</li>
+      </ul>
+      <p>iCloud, Game Center and App Store payments are services Apple provides to you under Apple&rsquo;s own terms and privacy policy.</p>
+    </section>
+
+    <section aria-labelledby="retention">
+      <h2 id="retention">9. How long data is kept</h2>
+      <ul>
+        <li><strong>On your device:</strong> until you delete the game.</li>
+        <li><strong>In your iCloud:</strong> until you remove it, as Apple&rsquo;s iCloud settings allow.</li>
+        <li><strong>Emails you send us:</strong> only as long as we need them to answer you and deal with any follow-up.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="your-rights">
+      <h2 id="your-rights">10. Your rights</h2>
+      <p>Depending on where you live (for example the UK, the EU or California), you may have the right to ask what personal data we hold about you and to get a copy, to have it corrected or deleted, to object to or restrict how we use it, and to take it elsewhere. To use any of these rights, email <a href="mailto:macauleytreleaven@gmail.com">macauleytreleaven@gmail.com</a>. We will not charge you or treat you differently for asking.</p>
+      <p>In practice we hold very little about you:</p>
+      <ul>
+        <li><strong>Your progress</strong> is on your device and in your iCloud, under your control. We cannot see it or change it.</li>
+        <li><strong>Game Center, iCloud and purchase records</strong> are held by Apple. You can see, download or delete the data Apple holds about you at <a href="https://privacy.apple.com/">privacy.apple.com</a>.</li>
+        <li><strong>Emails you have sent us:</strong> ask, and we will send you a copy or delete them.</li>
+      </ul>
+      <p><strong>If you live in California or another US state with a privacy law:</strong> we do not sell or share personal information, as those words are defined in those laws, and we do not use it for targeted advertising.</p>
+      <p>If you are unhappy with how we have handled your data, please tell us first so we can put it right. You can also complain to a data protection authority: in the UK, the <a href="https://ico.org.uk/make-a-complaint/">Information Commissioner&rsquo;s Office</a>; in the EU, the authority in your country.</p>
+    </section>
+
+    <section aria-labelledby="children">
+      <h2 id="children">11. Children</h2>
+      <p>Peak Streak is made for a general audience. It is not directed at children under 13, and it does not knowingly collect personal information from anyone of any age. </p>
+      <p>Parents can use Screen Time and Ask to Buy on the iPhone or iPad to control purchases. If you believe a child has sent us personal information, for example in an email, contact us and we will delete it.</p>
+    </section>
+
+    <section aria-labelledby="transfers">
+      <h2 id="transfers">12. Where data is processed</h2>
+      <p>We do not process any data from the game ourselves, so nothing is transferred to us anywhere.</p>
+      <p>Apple may process data for iCloud, Game Center and the App Store in other countries, as described in Apple&rsquo;s Privacy Policy.</p>
+    </section>
+
+    <section aria-labelledby="changes">
+      <h2 id="changes">13. Changes to this policy</h2>
+      <p>If the way the game handles data changes, we will update this page and the date at the top before the change reaches the game.</p>
+      <p>Peak Streak has no adverts. If we ever decide to add them, this policy will be updated first, to explain what an advertising partner would receive and the choices you would have.</p>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">14. Contact us</h2>
+      <p>Macauley Treleaven<br>
+      Email: <a href="mailto:macauleytreleaven@gmail.com">macauleytreleaven@gmail.com</a></p>
+      <p>For help with the game itself, see the <a href="https://mactr11.github.io/peak-streak/support.html">Peak Streak support page</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Macauley Treleaven &middot; <a href="https://mactr11.github.io/peak-streak/support.html">Support</a> &middot; <a href="https://mactr11.github.io/peak-streak/privacy.html">Privacy</a></p>
+    <p>Apple, iPhone, iPad, iCloud, Game Center and App Store are trademarks of Apple Inc.</p>
+  </footer>
+</div>
+</body>
+</html>

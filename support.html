@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#B9D7FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1131" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="no-referrer">
+<title>Help and Support · Peak Streak</title>
+<meta name="description" content="Help with Peak Streak, the TriPeaks solitaire game for iPhone and iPad: how to play, moving your progress to a new phone, restoring purchases, cancelling VIP, refunds and how to contact us.">
+<style>
+:root {
+  --coral: #FA7352;
+  --ink: #212652;
+  --gold: #FFC74D;
+  --sky: #3885EB;
+  --bg-top: #B9D7FF;
+  --bg-bottom: #EAF3FF;
+  --surface: #FFFFFF;
+  --text: #212652;
+  --muted: #4B527F;
+  --link: #B8432A;
+  --line: rgba(33, 38, 82, 0.14);
+  --soft: rgba(56, 133, 235, 0.08);
+  --note: #FFF4D9;
+  --note-line: #F2C25A;
+  --shadow: 0 1px 2px rgba(33, 38, 82, 0.06), 0 14px 36px rgba(33, 38, 82, 0.10);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-top: #0D1131;
+    --bg-bottom: #181E4A;
+    --surface: #20275A;
+    --text: #EEF0FF;
+    --muted: #BCC1E6;
+    --link: #FF9F87;
+    --line: rgba(255, 255, 255, 0.14);
+    --soft: rgba(255, 255, 255, 0.05);
+    --note: rgba(255, 199, 77, 0.12);
+    --note-line: rgba(255, 199, 77, 0.45);
+    --shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg-bottom) linear-gradient(180deg, var(--bg-top) 0, var(--bg-bottom) 560px) no-repeat;
+  font: 17px/1.6 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px; padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+.top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; padding: 20px 0 18px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; color: var(--text); text-decoration: none; }
+.mark { position: relative; width: 34px; height: 34px; border-radius: 10px; overflow: hidden; flex: none; background: linear-gradient(180deg, #5E9BF0, #A9CCFF); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35); }
+.mark::before { content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--gold); top: 6px; right: 6px; }
+.mark::after { content: ""; position: absolute; inset: 12px 0 0 0; background: #FFFFFF; clip-path: polygon(0 100%, 22% 35%, 38% 70%, 55% 10%, 75% 65%, 88% 40%, 100% 100%); }
+.top nav { display: flex; gap: 2px; margin-right: -6px; }
+.top nav a { color: var(--text); text-decoration: none; font-weight: 700; font-size: 15px; padding: 8px 11px; border-radius: 999px; }
+.top nav a:hover { background: var(--soft); }
+.top nav a[aria-current="page"] { background: var(--surface); box-shadow: var(--shadow); }
+main { background: var(--surface); border-radius: 28px; box-shadow: var(--shadow); padding: 28px 20px 32px; margin-bottom: 24px; }
+@media (min-width: 640px) { main { padding: 44px 52px 48px; } }
+h1 { font-size: clamp(30px, 7vw, 42px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 8px; }
+h2 { font-size: 23px; line-height: 1.3; letter-spacing: -0.01em; margin: 44px 0 10px; scroll-margin-top: 16px; }
+h3 { font-size: 18px; line-height: 1.35; margin: 0 0 6px; scroll-margin-top: 16px; }
+p, ul, ol { margin: 0 0 14px; }
+ul, ol { padding-left: 24px; }
+li { margin: 5px 0; }
+li::marker { color: var(--coral); font-weight: 700; }
+strong { font-weight: 700; }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+.lede { color: var(--muted); font-size: 18px; margin: 0 0 26px; }
+.path { font-weight: 700; }
+.jump { border: 1px solid var(--line); border-radius: 20px; padding: 16px 20px 8px; margin: 0 0 8px; }
+.jump h2 { margin: 0 0 6px; font-size: 17px; color: var(--muted); }
+.jump ul { list-style: none; padding: 0; margin: 0 0 8px; }
+.jump li { margin: 4px 0; }
+.qa { border-top: 1px solid var(--line); padding: 22px 0 8px; }
+.qa:first-of-type { border-top: 0; padding-top: 6px; }
+.steps li { padding-left: 4px; }
+.note { background: var(--note); border: 1px solid var(--note-line); border-radius: 16px; padding: 12px 16px; margin: 0 0 14px; }
+.contact { background: var(--soft); border: 1px solid var(--line); border-radius: 22px; padding: 22px 20px 10px; margin-top: 16px; }
+.contact h2 { margin-top: 0; }
+.button { display: inline-block; background: var(--coral); color: var(--ink); font-weight: 800; text-decoration: none; padding: 12px 22px; border-radius: 999px; margin: 2px 0 16px; box-shadow: 0 6px 16px rgba(250, 115, 82, 0.28); }
+.button:hover { text-decoration: none; filter: brightness(1.04); }
+footer { color: var(--muted); font-size: 15px; text-align: center; padding: 4px 0 40px; padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+footer a { color: inherit; }
+footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="brand"><span class="mark" aria-hidden="true"></span>Peak Streak</span>
+    <nav aria-label="Peak Streak pages">
+      <a href="https://mactr11.github.io/peak-streak/support.html" aria-current="page">Support</a>
+      <a href="https://mactr11.github.io/peak-streak/privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Help and support</h1>
+    <p class="lede">Answers to common questions about Peak Streak, and how to reach us if you need a hand.</p>
+
+    <nav class="jump" aria-labelledby="questions">
+      <h2 id="questions">Questions</h2>
+      <ul>
+        <li><a href="#how-to-play">How do I play?</a></li>
+        <li><a href="#new-phone">I&rsquo;ve lost my progress, or I have a new phone</a></li>
+        <li><a href="#restore">How do I restore my purchases?</a></li>
+        <li><a href="#missing">I bought something and it hasn&rsquo;t arrived</a></li>
+        <li><a href="#cancel-vip">How do I cancel Peak Streak VIP?</a></li>
+        <li><a href="#refunds">Can I get a refund?</a></li>
+        <li><a href="#ads">Are there adverts?</a></li>
+        <li><a href="#reminders">How do I turn reminders on or off?</a></li>
+        <li><a href="#game-center">How do I sign in to Game Center?</a></li>
+        <li><a href="#comfort">Can I make the cards bigger, or turn the music off?</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="how-to-play">
+      <h2 id="how-to-play">How to play</h2>
+      <ol class="steps">
+        <li>Tap a face-up card that is <strong>one higher or one lower</strong> than the card on the pile. Suits don&rsquo;t matter, and kings and aces go on each other.</li>
+        <li>Cards played in a row make a <strong>streak</strong>. Their values add up and the total is multiplied by the number of cards, so long streaks score far more.</li>
+        <li>Taking the top card of a peak adds <strong>+2</strong> to the multiplier. Clear the board to win the level.</li>
+        <li>No card fits? Tap the deck to turn over a new one. Drawing banks your streak, so play every card you can first.</li>
+        <li>Clearing the board earns a star, and a high score earns two or three. Collect a souvenir from every place on the journey, and use boosters such as Undo and Wild when you&rsquo;re stuck.</li>
+      </ol>
+      <p>The full rules are in the game under <span class="path">Settings &rsaquo; Help &rsaquo; How to play</span>, and the <span class="path">Card guide</span> explains every special card.</p>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Common questions</h2>
+
+      <div class="qa">
+        <h3 id="new-phone">I&rsquo;ve lost my progress, or I have a new phone</h3>
+        <p>Peak Streak saves your progress on your device and, if you are signed in to iCloud, in your own iCloud account as well. To carry on on a new iPhone or an iPad:</p>
+        <ol>
+          <li>Sign in to iCloud with the <strong>same Apple Account</strong> on both devices.</li>
+          <li>Check that iCloud is on for Peak Streak: open the Settings app, tap your name, then iCloud, and find Peak Streak in the list of apps that use iCloud (you may need to tap to see them all).</li>
+          <li>Open Peak Streak on the new device while it is connected to the internet, and give it a minute.</li>
+        </ol>
+        <p>Progress from your devices is combined rather than overwritten, so you can play on an iPhone and an iPad.</p>
+        <p class="note">If the game was deleted while iCloud was off for it, its progress cannot be brought back. We do not keep a copy of anyone&rsquo;s progress.</p>
+      </div>
+
+      <div class="qa">
+        <h3 id="restore">How do I restore my purchases?</h3>
+        <p>In the game, tap the gear on the home screen to open Settings, then <span class="path">Purchases &rsaquo; Restore purchases</span>. Make sure you are signed in to the App Store with the Apple Account you bought with.</p>
+        <p>This brings back one-time purchases and an active VIP membership. Coins you bought are part of your progress, which moves between devices through iCloud (see above).</p>
+      </div>
+
+      <div class="qa">
+        <h3 id="missing">I bought something and it hasn&rsquo;t arrived</h3>
+        <p>Close Peak Streak completely (swipe it away in the app switcher) and open it again while connected to the internet. The App Store hands the game any purchase that did not finish, and the game delivers it.</p>
+        <p>If the game says your purchase is <strong>waiting for approval</strong>, Ask to Buy is on for your Family Sharing group. The item arrives once the family organiser approves it.</p>
+        <p>Still missing? <a href="#contact">Email us</a> with what you bought, the date, and the order ID from Apple&rsquo;s receipt email.</p>
+      </div>
+
+      <div class="qa">
+        <h3 id="cancel-vip">How do I cancel Peak Streak VIP?</h3>
+        <p>VIP is a subscription through Apple, so it is cancelled in your Apple Account settings rather than in the game:</p>
+        <ol>
+          <li>Open the <strong>Settings</strong> app and tap your name.</li>
+          <li>Tap <strong>Subscriptions</strong>, then <strong>Peak Streak VIP</strong>.</li>
+          <li>Tap <strong>Cancel Subscription</strong>.</li>
+        </ol>
+        <p>Cancel at least 24 hours before the renewal date to avoid the next payment. That includes a free trial, if you started VIP with one. You keep VIP until the end of the period you have paid for. Deleting the game does not cancel the subscription. Apple&rsquo;s guide: <a href="https://support.apple.com/118428">Cancel a subscription from Apple</a>.</p>
+      </div>
+
+      <div class="qa">
+        <h3 id="refunds">Can I get a refund?</h3>
+        <p>Payments are made to Apple, so refunds are decided by Apple and we cannot issue them ourselves. To ask for one:</p>
+        <ol>
+          <li>Go to <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> and sign in with your Apple Account.</li>
+          <li>Choose <strong>I&rsquo;d like to</strong> &rsaquo; <strong>Request a refund</strong>, and pick a reason.</li>
+          <li>Select the Peak Streak purchase and submit.</li>
+        </ol>
+        <p>Apple&rsquo;s guide: <a href="https://support.apple.com/118223">Request a refund for apps or content that you bought from Apple</a>.</p>
+      </div>
+
+      <div class="qa">
+        <h3 id="ads">Are there adverts?</h3>
+        <p>No. Peak Streak has no adverts. The game is free to play, with optional coin packs and an optional VIP membership.</p>
+      </div>
+
+      <div class="qa">
+        <h3 id="reminders">How do I turn reminders on or off?</h3>
+        <p>Reminders about your daily gift and the weekend Streak Festival are off unless you turn them on. Change them in the game&rsquo;s <span class="path">Settings &rsaquo; Gameplay &rsaquo; Daily gift reminders</span>.</p>
+        <p>If you said no when iOS first asked, the switch cannot turn them on by itself: open the Settings app, go to <span class="path">Notifications &rsaquo; Peak Streak</span> and allow notifications there first.</p>
+      </div>
+
+      <div class="qa">
+        <h3 id="game-center">How do I sign in to Game Center?</h3>
+        <p>Game Center is optional; you only need it for leaderboards and achievements. In the game&rsquo;s Settings, tap <span class="path">Sign in to Game Center</span>.</p>
+        <p>If that option isn&rsquo;t available, sign in to Game Center in the Settings app on your iPhone or iPad (search Settings for &ldquo;Game Center&rdquo;), then close Peak Streak completely and open it again.</p>
+      </div>
+
+      <div class="qa">
+        <h3 id="comfort">Can I make the cards bigger, or turn the music off?</h3>
+        <p>Yes. In the game&rsquo;s Settings:</p>
+        <ul>
+          <li><span class="path">Look &rsaquo; Bigger cards</span> makes the cards larger, and <span class="path">Four-colour deck</span> gives each suit its own colour.</li>
+          <li><span class="path">Sound and feel</span> turns sound effects, music and haptics on or off.</li>
+          <li><span class="path">Gameplay</span> turns hints and celebrations (confetti, flashes and shakes) on or off.</li>
+        </ul>
+        <p>Text in the game follows your iPhone&rsquo;s text size.</p>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact">
+      <h2 id="contact">Contact us</h2>
+      <p>Still stuck, found a bug or have an idea? Email us and we will do our best to help.</p>
+      <a class="button" href="mailto:macauleytreleaven@gmail.com?subject=Peak%20Streak%20support">Email macauleytreleaven@gmail.com</a>
+      <p>It helps if you include:</p>
+      <ul>
+        <li>what happened, and what you expected to happen;</li>
+        <li>your device (for example iPhone 15) and iOS version, from <span class="path">Settings &rsaquo; General &rsaquo; About</span>;</li>
+        <li>the game&rsquo;s version, shown at the bottom of the game&rsquo;s Settings;</li>
+        <li>for a purchase: what you bought, the date and the order ID from Apple&rsquo;s receipt email;</li>
+        <li>a screenshot, if it shows the problem.</li>
+      </ul>
+      <p><strong>Please never send your Apple Account password or card details.</strong> We will never ask for them.</p>
+      <p>How the game handles data: <a href="https://mactr11.github.io/peak-streak/privacy.html">Peak Streak privacy policy</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Macauley Treleaven &middot; <a href="https://mactr11.github.io/peak-streak/support.html">Support</a> &middot; <a href="https://mactr11.github.io/peak-streak/privacy.html">Privacy</a></p>
+    <p>Apple, iPhone, iPad, iCloud, Game Center and App Store are trademarks of Apple Inc.</p>
+  </footer>
+</div>
+</body>
+</html>
